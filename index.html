@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>Blame it on Jon</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <style>
       img {
         display: block;
@@ -9,18 +10,18 @@
         margin-right: auto;
         }
     </style>
-    <script>
+    <script type="text/javascript">
         function getRadomInt(min, max) {
           return Math.floor(Math.random() * (max - min + 1) ) + min;
         }
-        imgUrl=['https://blameitonjon.com/images/', getRadomInt(1,30), '.gif'].join('');
+        imgUrl=['images/', getRadomInt(1,30), '.gif'].join('');
     </script>
   </head>
   <body>
     <div>
-      <img id='randoImg' src='https://blameitonjon.com/images/pix.gif' alt='blame it on jon'>
+      <img id='randoImg' src='images/Pix.gif' alt='blame it on jon'>
     </div>
-    <script>
+    <script type="text/javascript">
     	document.getElementById("randoImg").src=imgUrl
     </script>
   </body>
