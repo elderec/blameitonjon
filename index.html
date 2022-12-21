@@ -23,18 +23,23 @@
         }
     </style>
     <script type="text/javascript">
+
       function getRadomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1) ) + min;
       }
-      let imgUrl=['images/', getRadomInt(1,30), '.gif'].join('');
+
+      let downloadingImage = new Image();
+      downloadingImage.src = ['images/', getRadomInt(1,30), '.gif'].join('');
+
+      downloadingImage.onload = function(){
+        document.getElementById("randomImg").src=downloadingImage.src
+      };
+
     </script>
   </head>
   <body>
     <div>
-      <img id='randomImg' src='images/Pix.gif' alt='blame it on jon'>
+      <img id='randomImg' src='images/spinner-1s-200px.svg' alt='blame it on jon'>
     </div>
-    <script type="text/javascript">
-      document.getElementById("randomImg").src=imgUrl
-    </script>
   </body>
 </html>
