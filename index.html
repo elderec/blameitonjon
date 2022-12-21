@@ -1,1 +1,28 @@
-<h1>Blame it on Jon</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Blame it on Jon</title>
+    <style>
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        }
+    </style>
+    <script>
+      function getRadomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) ) + min;
+      }
+      baseUrl='https://blameitonjon.com/images/'
+      imgUrl=baseUrl.concat(getRadomInt(1,5),".gif")
+		</script>
+  </head>
+  <body>
+    <div>
+      <img id='randoImg' src='' alt='blame it on jon'>
+    </div>
+    <script>
+    	document.getElementById("randoImg").src=imgUrl
+    </script>
+  </body>
+</html>
