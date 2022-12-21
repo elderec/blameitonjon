@@ -29,7 +29,7 @@
       }
 
       let downloadingImage = new Image();
-      downloadingImage.src = ['images/', getRadomInt(1,30), '.gif'].join('');
+      downloadingImage.src = ['images/', getRadomInt(1,50), '.gif'].join('');
 
       downloadingImage.onload = function(){
         document.getElementById("randomImg").src=downloadingImage.src
