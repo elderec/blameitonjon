@@ -3,7 +3,9 @@
   <head>
     <title>Blame it on Jon</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <style>
+    <meta charset="UTF-8">
+    <meta name="description" content="Blame it on Jon">
+    <style type="text/css">
       img {
         display: block;
         margin-left: auto;
@@ -11,18 +13,18 @@
         }
     </style>
     <script type="text/javascript">
-        function getRadomInt(min, max) {
-          return Math.floor(Math.random() * (max - min + 1) ) + min;
-        }
-        imgUrl=['images/', getRadomInt(1,30), '.gif'].join('');
+      function getRadomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) ) + min;
+      }
+      imgUrl=['images/', getRadomInt(1,30), '.gif'].join('');
     </script>
   </head>
   <body>
     <div>
-      <img id='randoImg' src='images/Pix.gif' alt='blame it on jon'>
+      <img id='randomImg' src='images/Pix.gif' alt='blame it on jon'>
     </div>
     <script type="text/javascript">
-    	document.getElementById("randoImg").src=imgUrl
+      document.getElementById("randomImg").src=imgUrl
     </script>
   </body>
 </html>
