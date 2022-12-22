@@ -5,6 +5,7 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <meta charset="UTF-8">
     <meta name="description" content="It's obviously his fault.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type="text/css">
       @media (prefers-color-scheme: dark) {
         body {
@@ -15,6 +16,9 @@
         body {
           background-color: white;
         } 
+      }
+      body {
+        font-size: 12px;
       }
       img {
         display: block;
@@ -29,7 +33,7 @@
       }
 
       let downloadingImage = new Image();
-      downloadingImage.src = ['images/', getRadomInt(1,50), '.gif'].join('');
+      downloadingImage.src = ['images/', getRadomInt(1,57), '.gif'].join('');
 
       downloadingImage.onload = function(){
         document.getElementById("randomImg").src=downloadingImage.src
