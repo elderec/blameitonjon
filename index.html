@@ -76,7 +76,10 @@
       downloadingImage.src = ['images/', getRadomInt(1,57), '.gif'].join('');
 
       downloadingImage.onload = function(){
-        document.getElementById("randomImg").src=downloadingImage.src
+        let img = document.getElementById("randomImg")
+        img.src = downloadingImage.src
+        img.height = img.clientHeight
+        img.width = img.clientWidth
       };
 
     </script>
