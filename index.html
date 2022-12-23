@@ -29,25 +29,43 @@
     <meta name="twitter:image" content="https://blameitonjon.com/images/preview.jpg">
   
     <style type="text/css">
-      @media (prefers-color-scheme: dark) {
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: black;
+            }
+        }
+        
+        @media (prefers-color-scheme: light) {
+            body {
+                background-color: white;
+            }
+        }
+        
+        @media (orientation: landscape) {
+            img {
+                height: 80vh;
+            }
+        }
+        
+        @media (orientation: portrait) {
+            img {
+                width: 100%;
+                max-width: 750px;
+            }
+        }
+        
         body {
-          background-color: black;
-        } 
-      }
-      @media (prefers-color-scheme: light) {
-        body {
-          background-color: white;
-        } 
-      }
-      body {
-        font-size: 12px;
-      }
-      img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+            font-size: 12px;
+        }
+        
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            object-fit: cover;
         }
     </style>
+
     <script type="text/javascript">
 
       function getRadomInt(min, max) {
@@ -65,7 +83,7 @@
   </head>
   <body>
     <div>
-      <img id='randomImg' src='images/spinner-1s-200px.svg' width="720" alt='blame it on jon'>
+      <img id='randomImg' src='images/spinner-1s-200px.svg' alt='Blame it on Jon'>
     </div>
   </body>
 </html>
