@@ -78,24 +78,25 @@
   </style>
   </head>
   <body>
-    <div>
-      <video id="videoclip" poster="images/spinner-1s-200px.svg" autoplay loop muted playsinline>
-        <source id="webmvideo" type="video/webm" />
-        <source id="mp4video" type="video/mp4" />
+    <div id="body-content">
+      <video id="clip" poster="images/spinner-1s-200px.svg" autoplay loop muted playsinline disableremoteplayback disablepictureinpicture>
+        <source id="webm" type="video/webm" />
+        <source id="mp4" type="video/mp4" />
       </video>
     </div>
+    <!-- Load the video(s) -->
     <script type="text/javascript">
       function getRadomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1) ) + min;
       }
-      let videocontainer = document.getElementById('videoclip');      
-      let videomp4source = document.getElementById('mp4video');
-      let videowebmsource = document.getElementById('webmvideo');
-
-      videomp4source.setAttribute('src', ['images/', getRadomInt(1,41), '.mp4'].join(''));
-      videowebmsource.setAttribute('src', ['images/', getRadomInt(1,41), '.webm'].join(''));
-
-      videocontainer.load();
+      let totalVids = 41;
+      let currentVid = getRadomInt(1,totalVids);
+      let vidContainer = document.getElementById('clip');      
+      let mp4Src = document.getElementById('mp4');
+      let webmSrc = document.getElementById('webm');
+      mp4Src.setAttribute('src', ['images/', currentVid, '.mp4'].join(''));
+      webmSrc.setAttribute('src', ['images/', currentVid, '.webm'].join(''));
+      vidContainer.load();
     </script>
   </body>
 </html>
