@@ -92,10 +92,9 @@
       let totalVids = 41;
       let currentVid = getRadomInt(1,totalVids);
       let vidContainer = document.getElementById('clip');      
-      let mp4Src = document.getElementById('mp4');
-      let webmSrc = document.getElementById('webm');
-      mp4Src.setAttribute('src', ['images/', currentVid, '.mp4'].join(''));
-      webmSrc.setAttribute('src', ['images/', currentVid, '.webm'].join(''));
+      let doMp4 = document.getElementById('mp4').setAttribute('src', ['images/', currentVid, '.mp4'].join(''));
+      let doWebM = document.getElementById('webm').setAttribute('src', ['images/', currentVid, '.webm'].join(''));
+
       vidContainer.load();
     </script>
   </body>
