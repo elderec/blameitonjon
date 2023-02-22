@@ -91,11 +91,9 @@
       }
       let totalVids = 41;
       let currentVid = getRadomInt(1,totalVids);
-      let vidContainer = document.getElementById('clip');      
-      let doMp4 = document.getElementById('mp4').setAttribute('src', ['images/', currentVid, '.mp4'].join(''));
-      let doWebM = document.getElementById('webm').setAttribute('src', ['images/', currentVid, '.webm'].join(''));
-
-      vidContainer.load();
+      document.getElementById('mp4').setAttribute('src', ['images/', currentVid, '.mp4'].join(''));
+      document.getElementById('webm').setAttribute('src', ['images/', currentVid, '.webm'].join(''));
+      document.getElementById('clip').load();
     </script>
   </body>
 </html>
