@@ -40,64 +40,58 @@
     </script>
 
     <style>
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: black;
-            }
-        }
-        
-        @media (prefers-color-scheme: light) {
-            body {
-                background-color: white;
-            }
-        }
-        
-        @media (orientation: landscape) {
-            img {
-                height: 80vh;
-            }
-        }
-        
-        @media (orientation: portrait) {
-            img {
-                width: 100%;
-                max-width: 750px;
-            }
-        }
-        
-        body {
-            font-size: 12px;
-        }
-        
-        img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            object-fit: cover;
-        }
-    </style>
-
-    <script type="text/javascript">
-
-      function getRadomInt(min, max) {
-        return Math.floor(Math.random() * (max - min + 1) ) + min;
+      @media (prefers-color-scheme: dark) {
+          body {
+              background-color: black;
+          }
       }
-
-      let downloadingImage = new Image();
-      downloadingImage.src = ['images/', getRadomInt(1,57), '.gif'].join('');
-
-      downloadingImage.onload = function(){
-        let img = document.getElementById("randomImg")
-        img.src = downloadingImage.src
-        img.height = img.clientHeight
-        img.width = img.clientWidth
-      };
-
-    </script>
+      
+      @media (prefers-color-scheme: light) {
+          body {
+              background-color: white;
+          }
+      }
+      
+      @media (orientation: landscape) {
+        video {
+              height: 80vh;
+          }
+      }
+      
+      @media (orientation: portrait) {
+        video {
+              width: 100%;
+              max-width: 750px;
+          }
+      }
+      
+      body {
+          font-size: 12px;
+      }
+      
+      video {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          object-fit: cover;
+      }
+  </style>
   </head>
   <body>
     <div>
-      <img id='randomImg' src='images/spinner-1s-200px.svg' alt='Blame it on Jon'>
+      <video id="videoclip" poster="images/spinner-1s-200px.svg" autoplay loop muted playsinline>
+        <source id="mp4video" type="video/mp4" />
+      </video>
     </div>
+    <script type="text/javascript">
+      function getRadomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) ) + min;
+      }
+      let videocontainer = document.getElementById('videoclip');
+      let videosource = document.getElementById('mp4video');
+      let newmp4 = ['images/', getRadomInt(1,41), '.mp4'].join('');
+      videosource.setAttribute('src', newmp4);
+      videocontainer.load();
+    </script>
   </body>
 </html>
