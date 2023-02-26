@@ -90,11 +90,27 @@
       function getRadomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1) ) + min;
       }
+
+      // how many vids?
       let totalVids = 41;
       let currentVid = getRadomInt(1,totalVids);
-      document.getElementById('mp4').setAttribute('src', ['images/', currentVid, '.mp4'].join(''));
-      document.getElementById('webm').setAttribute('src', ['images/', currentVid, '.webm'].join(''));
-      document.getElementById('clip').load();
+
+      // stupid ios
+      let ua = window.navigator.userAgent;
+      let iOS = ua.match(/iPad/i) || ua.match(/iPhone/i);
+      let webkit = ua.match(/WebKit/i);
+      let iOSSafari = iOS && webkit && !ua.match(/CriOS/i);
+
+      // alter video src
+      if (!iOSSafari) {
+        document.getElementById('mp4').setAttribute('src', ['images/', currentVid, '.mp4'].join(''));
+        document.getElementById('webm').setAttribute('src', ['images/', currentVid, '.webm'].join(''));
+        //document.getElementById('clip').load();
+      }
+      else {
+        document.getElementById('clip').setAttribute('src', ['images/', currentVid, '.mp4'].join(''));
+        //document.getElementById('clip').load();
+      }
     </script>
   </body>
 </html>
