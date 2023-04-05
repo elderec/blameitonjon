@@ -1,3 +1,3 @@
 # blameitonjon
 
-Because obviously it's his fault.
+It's obviously his fault.
