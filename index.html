@@ -5,8 +5,9 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="alternate" type="application/atom+xml" href="https://github.com/elderec/blameitonjon/commits.atom">
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="canonical" href="https://blameitonjon.com/index.html">
     <meta charset="UTF-8">
-    <meta name="description" content="It's obviously his fault.">
+    <meta name="description" content="It's obviously his fault. Missed your alarm? Lost your socks? Spilled your coffee? Whatever goes wrong, Jon's to blame. Enjoy a new random blame Jon GIF with every visit!">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Facebook Meta Tags -->
@@ -47,18 +48,6 @@
         Sorry, your browser doesn't support HTML5 video.
       </video>
     </div>
-    <!-- Load the video(s) -->
-    <script>
-      function getRadomInt(min, max) {
-        return Math.floor(Math.random() * (max - min + 1) ) + min;
-      }
-      let currentVid = getRadomInt(1,34);
-      let vid = document.getElementById('clip');
-      document.getElementById('mp4').src='images/'+currentVid+'.mp4';
-      document.getElementById('webm').src='images/'+currentVid+'.webm';
-      vid.load();
-      vid.setAttribute('disableRemotePlayback', '');      
-      vid.setAttribute('disablePictureInPicture', '');
-    </script>
+    <script src="loadvid.js" defer></script>
   </body>
 </html>
