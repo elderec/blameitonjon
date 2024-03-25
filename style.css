@@ -33,3 +33,9 @@ video {
     margin-right: auto;
     object-fit: cover;
 }
+
+.permalink {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
